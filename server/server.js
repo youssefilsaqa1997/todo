@@ -20,6 +20,7 @@ app.get('/', (req, res) => {
         massege: 'welcome to todo server',
         apis: [{
             URL: "https://safe-chamber-93231.herokuapp.com/signUp",
+            type:"post req",
             Takes: {
                 email: "x@x.x",
                 password: "xxxxxx",
@@ -28,6 +29,7 @@ app.get('/', (req, res) => {
             }, gives: "object that added to DB"
         },{
             URL: "https://safe-chamber-93231.herokuapp.com/login",
+            type:"post req",
             Takes: {
                 email: "x@x.x",
                 password: "xxxxxx"
