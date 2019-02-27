@@ -38,7 +38,7 @@ var productSchema = new mongoose.Schema({
 });
 
 
-var Product = mongoose.model('product', branchSchema);
+var Product = mongoose.model('product', productSchema);
 
 module.exports={
     Product
