@@ -23,7 +23,7 @@ var productSchema = new mongoose.Schema({
   madeIn:{
     type:String
   },
-  logo:{
+  productimage:{
     type:String,
     required:true 
   },
