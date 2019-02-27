@@ -3,40 +3,38 @@ const validator=require('validator')
 const jwt = require('jsonwebtoken');
 const _ = require('lodash');
 
-var userSchema = new mongoose.Schema({
-  email:{
-    type:String,
-    required:true,
-    trim:true,
-    unique:true
-  },
-  password:{
-    type:String,
-    required:true,
-    minlength:3
-  },
-  typeOfUser:{
-    type:String,
-    required:true,
-    trim:true
-  },
-  mobile:{
+var branchSchema = new mongoose.Schema({
+  name:{
     type:String,
     required:true
   },
-  profilePic:{
-    type:String
-  },
-  name:{
+  mobile:{
     type:String,
     required:true,
-    trim:true,
+  },
+  area:{
+    type:String,
+    required:true
+  },
+  ownerId:{
+    type:String,
+    required:true
+  },
+  openingHours:{
+    type:String
+  },
+  address:{
+    type:String,
+    required:true
+  },
+  logo:{
+    type:String
   }
 });
 
 
-var User = mongoose.model('users', userSchema);
+var Branch = mongoose.model('branch', branchSchema);
 
 module.exports={
-  User
+    Branch
 }
